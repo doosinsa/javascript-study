@@ -45,6 +45,23 @@ const object2 = {
 // }
 
 // const array2 = Object.keys(object2);
-const array2 = Object.values(object2);
-console.log(array2.length);
+// const array2 = Object.values(object2);
+// console.log(array2.length);
+
+const chain1 = {
+  total: 0,
+  plus1: function() {
+    this.total += 1;
+    return this;
+  },
+  plus10: function() {
+    this.total += 10;
+    return this;
+  },
+  plus: function(num) {
+    this.total += num;
+    return this;
+  }
+};
+chain1.plus1().plus10().plus(2);
 </script>
